@@ -1,0 +1,34 @@
+class Animal:
+    def make_sound(self):
+        print("Generic animal sound")
+
+
+class Dog(Animal):
+    def make_sound(self):
+        super().make_sound()
+        print("Dog barks: Woof! Woof!")
+
+
+class Cat(Animal):
+    def make_sound(self):
+        super().make_sound()
+        print("Cat meows: Meow! Meow!")
+
+
+def animal_sound_in_zoo(animal):
+    animal.make_sound()
+
+
+def main():
+    dog = Dog()
+    cat = Cat()
+
+    print("Animal sounds in the zoo:")
+    print("=========================")
+    animal_sound_in_zoo(dog)
+    print("\n")
+    animal_sound_in_zoo(cat)
+
+
+if __name__ == "__main__":
+    main()
